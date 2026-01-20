@@ -1,7 +1,8 @@
 {
-  "hash": "200067541124826d34453efcdda2ca1f",
+  "hash": "663d5c7effe823b246df8852ac162519",
   "result": {
-    "markdown": "# Preface {.unnumbered}\n\nThis is a Quarto book.\n\nTo learn more about Quarto books visit <https://quarto.org/docs/books>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n\n```{.r .cell-code}\nccc <- \"hola\"\n```\n:::\n\n\n\n::: {#CHUNKNAME layout-ncol=2}\n\n\n![ccc](FILE){#reference}\n\n\n![ccc](FILE){#reference}\n\n:::",
+    "engine": "knitr",
+    "markdown": "# Preface {.unnumbered}\n\nThis is a Quarto book.\n\nTo learn more about Quarto books visit <https://quarto.org/docs/books>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n\n\n\n::: {#CHUNKNAME layout-ncol=2}\n\n\n![ccc](FILE){#reference}\n\n\n![ccc](FILE){#reference}\n\n:::",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
