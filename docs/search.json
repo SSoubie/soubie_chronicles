@@ -4,9 +4,39 @@
     "href": "index.html",
     "title": "soubie_chronicles",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\n\n\nccc\n\n\n\n\n\n\n\nccc",
+    "text": "Preface\nHola! I’m Santiago. I’m a Political Scientist, Urban Economist, and Data Scientist.\nI’m particularly interested in the intersection between urbanism and computational science, and how the use of data, geospatial tools, and open government practices can support evidence-based decision-making to build more sustainable and livable cities.\nI have worked as an Open Data Director at Argentina’s Secretariat of Innovation, Science and Technology and at the Undersecretariat of Tourism. I am also a member of IDERA (Argentina’s Spatial Data Infrastructure) and a Graduate Teaching Assistant at Torcuato Di Tella University.\nNowadays, I am studying Urban Spatial Science at the Center for Advanced Spatial Analysis at UCL. There, I am learning about remote sensing and earth observation techniques among many things. This informal diary has the intent to record the main ideas and knowledge that I extract from each class.\nCurrently, I am studying Urban Spatial Science at the Centre for Advanced Spatial Analysis (CASA), UCL. There, I am learning about remote sensing and Earth observation techniques, among other topics. This informal diary aims to document the main ideas and knowledge that I gain from each class.\nI truly believe that it is worthwhile to explore Remote Sensing in greater depth if one is interested in urbanism and geospatial data. Data is everywhere; however, it remains difficult to access high-quality open data to work. Remote sensing, although initially challenging to grasp, can provide us with unique tools to bridge the information gap, as it enables large-scale, systematic, and continuous data collection across territories where traditional data sources are limited, outdated, or inaccessible.",
     "crumbs": [
       "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
     ]
   }
 ]
