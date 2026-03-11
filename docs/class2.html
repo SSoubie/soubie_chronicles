@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Santiago Soubie">
 
-<title>soubie_chronicles</title>
+<title>2&nbsp; Week - It’s hot out here: Dive into thermal remote sensors – soubie_chronicles</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./class1.html" rel="next">
+<link href="./class3.html" rel="next">
+<link href="./class1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -70,6 +70,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/fitvids-2.1.1/fitvids.min.js"></script>
+
 
 
 </head>
@@ -83,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./class2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week - It’s hot out here: Dive into thermal remote sensors</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -122,8 +124,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./class2.html" class="sidebar-item-text sidebar-link">
+  <a href="./class2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week - It’s hot out here: Dive into thermal remote sensors</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./class3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./class4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week - How can we take advantage of Remote Sensing (without dying in the attempt)?</span></span></a>
   </div>
 </li>
     </ul>
@@ -131,40 +145,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">soubie_chronicles</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week - It’s hot out here: Dive into thermal remote sensors</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Santiago Soubie </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
   
     
   </div>
@@ -174,17 +170,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Hola! I’m Santiago. I’m a Political Scientist, Urban Economist, and Data Scientist.</p>
-<p>I’m particularly interested in the intersection between urbanism and computational science, and how the use of data, geospatial tools, and open government practices can support evidence-based decision-making to build more sustainable and liveable cities.</p>
-<p>I have worked as an Open Data Director at Argentina’s Secretariat of Innovation, Science and Technology and at the Undersecretariat of Tourism. I am also a member of IDERA (Argentina’s Spatial Data Infrastructure) and a Graduate Teaching Assistant at Torcuato Di Tella University.</p>
-<p>Nowadays, I am studying Urban Spatial Science at the Center for Advanced Spatial Analysis at UCL. There, I am learning about remote sensing and earth observation techniques among many things. This informal diary has the intent to record the main ideas and knowledge that I extract from each class.</p>
-<p>Currently, I am studying Urban Spatial Science at the Centre for Advanced Spatial Analysis (CASA), UCL. There, I am learning about remote sensing and Earth observation techniques, among other topics. This informal diary aims to document the main ideas and knowledge that I gain from each class.</p>
-<p>I truly believe that it is worthwhile to explore Remote Sensing in greater depth if one is interested in urbanism and geospatial data. Data is everywhere; however, it remains difficult to access high-quality open data to work. Remote sensing, although initially challenging to grasp, can provide us with unique tools to bridge the information gap, as it enables large-scale, systematic, and continuous data collection across territories where traditional data sources are limited, outdated, or inaccessible.</p>
+<p><br></p>
+<p>Thermal remote sensing provides a unique way to observe the Earth’s energy balance and surface processes, making it an essential tool for monitoring environmental change and supporting more informed decision-making in a warming world. Follow the presentation to learn more about the topic this week.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
+<iframe src="https://ssoubie.github.io/thermal_sensors/#1" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+</div>
+</div>
+<p><br> <br></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dTynAIxM8CU?si=ZwnNQVJsHnR1u9LQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -589,10 +589,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./class1.html" class="pagination-link" aria-label="Week - Grasping the Basic of Remote Sensing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week - Grasping the Basic of Remote Sensing</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./class1.html" class="pagination-link" aria-label="Week - Grasping the Basic of Remote Sensing">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week - Grasping the Basic of Remote Sensing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./class3.html" class="pagination-link" aria-label="Week">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

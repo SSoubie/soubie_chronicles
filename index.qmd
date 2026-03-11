@@ -2,7 +2,7 @@
 
 Hola! I’m Santiago. I’m a Political Scientist, Urban Economist, and Data Scientist.
 
-I’m particularly interested in the intersection between urbanism and computational science, and how the use of data, geospatial tools, and open government practices can support evidence-based decision-making to build more sustainable and livable cities.
+I’m particularly interested in the intersection between urbanism and computational science, and how the use of data, geospatial tools, and open government practices can support evidence-based decision-making to build more sustainable and liveable cities.
 
 I have worked as an Open Data Director at Argentina’s Secretariat of Innovation, Science and Technology and at the Undersecretariat of Tourism. I am also a member of IDERA (Argentina’s Spatial Data Infrastructure) and a Graduate Teaching Assistant at Torcuato Di Tella University.
 
@@ -16,4 +16,3 @@ I truly believe that it is worthwhile to explore Remote Sensing in greater depth
 # xaringanExtra::embed_xaringan(url = "https://ssoubie.github.io/practice_2/#1",
 #                               ratio = "16:9")
 ```
-

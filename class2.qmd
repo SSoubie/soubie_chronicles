@@ -1,0 +1,18 @@
+# Week - It's hot out here: Dive into thermal remote sensors
+
+<br>
+
+Thermal remote sensing provides a unique way to observe the Earth's energy balance and surface processes, making it an essential tool for monitoring environmental change and supporting more informed decision-making in a warming world. Follow the presentation to learn more about the topic this week.
+
+```{r, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://ssoubie.github.io/thermal_sensors/#1",
+                              ratio = "16:9")
+```
+
+
+<br>
+<br>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dTynAIxM8CU?si=ZwnNQVJsHnR1u9LQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
