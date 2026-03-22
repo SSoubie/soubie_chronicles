@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Week - GEE: Google Earth Engine or Georgeous Ephimerous Experience? – soubie_chronicles</title>
+<title>5&nbsp; Week - GEE: Google Earth Engine or Gorgeous Ephemeral Experience? – soubie_chronicles</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./class8.html" rel="next">
 <link href="./class4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -128,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./class3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week - Cooming soon!</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week - No one is perfect - Imagery Calibration and Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -143,20 +144,33 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week - GEE: Google Earth Engine or Gorgeous Ephemeral Experience?</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./class8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#applications" id="toc-applications" class="nav-link active" data-scroll-target="#applications"><span class="header-section-number">5.1</span> Applications</a></li>
+  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts"><span class="header-section-number">5.2</span> Final thoughts</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week - GEE: Google Earth Engine or Georgeous Ephimerous Experience?</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week - GEE: Google Earth Engine or Gorgeous Ephemeral Experience?</span></h1>
 </div>
 
 
@@ -181,13 +195,16 @@ ul.task-list li input[type="checkbox"] {
 <p>Another key point of the platform is that its analytical capabilities rely on distributed parallel processing and a lazy computation model, which allows the system to automatically subdivide and distribute computational tasks across multiple servers. Through its API and web-based interactive development environment, users can smoothly perform a wide range of spatial operations, including filtering, subsetting, joins, clipping, zonal statistics, and image classification. In addition, advanced analytical techniques, such as machine learning, deep learning, supervised and unsupervised classification, can be applied to study spatial patterns at different scales.</p>
 <p>Despite its many advantages, it should be noted that GEE also presents some limitations. First, as it is provided by a private company, there are processing quotas, restrictions on system usage, and other limitations that have become more common as the platform has become popular. These constraints raise concerns about unrestricted access to the platform in the future.</p>
 <p>Additionally, the requirement to adapt existing algorithms to the GEE API may represent a challenge for some users. Also, operations that involve intensive iterative computation or rely on large datasets not already available within the platform can also present additional technical difficulties.</p>
-<p>##Applications</p>
+<section id="applications" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.1</span> Applications</h2>
 <p>Google Earth Engine is winning a place between the most popular tools in remote sensing due to its key features (easy access to heavy geospatial datasets, high computational power, integration with other platforms and apps, etc.), supporting a wide range of applications including forest monitoring, crop yield estimation, flood mapping, climate analysis, etc.</p>
 <p>In this context, several studies have highlighted the strength of GEE in comparison with other well-established tools in the field. One example is “Wet snow detection in Patagonian Andes with Sentinel-1 SAR temporal series analysis in GEE” (Beltramone et al, 2020). In this article, the authors explore the application of Sentinel-1 SAR satellite imagery within the GEE platform for monitoring wet snow conditions in the Argentinian Andes.</p>
 <p>Focusing on polygons near Bariloche, the analysis shows that terrain characteristics, such as topography, angles and slope orientation, play an important role in influencing radar signal responses. More importantly, Beltramone et al (2020) assess the reliability of GEE’s automated processing by comparing it with more labor-intensive manual approaches (such as SNAP), obtaining comparable or even better results. Overall, the findings indicate that GEE provides a cost-efficient and effective alternative to hazardous field observations for supporting water resource management and improving natural hazard prediction.</p>
 <p>In some cases, the improvements in precision and efficiency provided by GEE can lead to highly valuable outcomes for decision-making. An example is “Evaluación de incendios en áreas periurbanas de la ciudad de Corrientes (Argentina) durante la sequía extrema del año 2020” (Smichowski et al, 2021). In this work, the authors examine the consequences of large-scale wildfires that affected peri-urban areas of the city of Corrientes, Argentina, during the drought of 2020 by combining Sentinel-2A satellite imagery with GEE.</p>
 <p>By identifying an optimal detection threshold, the analysis revealed that more than 21% of the land vulnerable to fire was affected, a figure considerably higher than official government estimates. In addition, the authors developed a Fire Density Index to better quantify fire magnitude by taking advantage of GEE’s capabilities. Overall, the study highlights the importance of GEE for generating accurate spatial information to support effective fire risk management and ecosystem restoration.</p>
-<p>##Final thoughts</p>
+</section>
+<section id="final-thoughts" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="final-thoughts"><span class="header-section-number">5.2</span> Final thoughts</h2>
 <p>Google Earth Engine is the Ferrari of Earth observation tools. It is big (with enormous storage capacity), fast (an extremely powerful computational engine), elegant (it allows the creation of attractive visualizations), and ultimately an impressive piece of engineering (behind its relatively simple interface lies an extremely complex system that most users ignore).</p>
 <p>There is no doubt that, as cloud computing and artificial intelligence continue to evolve, the platform will play an increasingly important role in global environmental monitoring and geospatial analysis. For instance, Could we monitor how cities grow in almost real time? Could we predict school abandonment using roof materials? Could local governments tax properties on the volume of their swimming pools?</p>
 <p>Now, I want to ask you something: How long can a Ferrari remain freely available to everyone? Owning a Ferrari at the beginning of the last century would have made little sense without the infrastructure needed to sustain it (roads, fuel, and maintenance systems). The automobile shape the city and the city shape the car. Similarly, GEE relies on massive infrastructure and resources. As its capabilities expand and its applications become increasingly valuable, maintaining unrestricted access may become more challenging.</p>
@@ -195,6 +212,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Business as usual. As many grandmothers wisely say, we should never take things for granted. GEE gives us an unprecedented power, and with great power comes great responsibility. So, use it wisely! Run fast to create new geospatial solutions for the most thrilling challenges of this world!</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -604,6 +622,9 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./class8.html" class="pagination-link" aria-label="Week - This is the end, but don’t be SAR: Synthetic Aperture Radar">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

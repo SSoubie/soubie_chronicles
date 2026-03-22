@@ -13,6 +13,7 @@ book:
     - class3.qmd
     - class4.qmd
     - class5.qmd
+    - class8.qmd
 
 
 bibliography: references.bib
