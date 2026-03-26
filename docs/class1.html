@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">About me</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./class3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week - No one is perfect - Imagery Calibration and Enhancement</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week - No one is perfect: Imagery Calibration and Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -146,8 +146,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./class6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week - Can we apply machine learning to remote sensing? [YES] | no</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./class8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span></a>
   </div>
 </li>
     </ul>
@@ -155,8 +161,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#applications" id="toc-applications" class="nav-link active" data-scroll-target="#applications"><span class="header-section-number">1.1</span> Applications</a></li>
+  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts"><span class="header-section-number">1.2</span> Final Thoughts</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -180,28 +193,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Data is expanding everywhere, or, at least, that’s what tech gurus say. However, anyone who has spent some time exploring open data portals knows how difficult it is to find high-quality datasets that remain consistent, continuous, and comparable over long periods of time.</p>
+<p><br></p>
+<p><strong>Data</strong> is expanding everywhere, or, at least, that’s what tech gurus say. However, anyone who has spent some time exploring open data portals knows how difficult it is to find high-quality datasets that remain consistent, continuous, and comparable over long periods of time.</p>
 <p>What if I told you there is an (almost) free endless source of information about the Earth?</p>
-<p>Remote Sensing (or Earth observation) is the process of acquiring information about something from a distance.</p>
-<p>Each material on the Earth’s surface absorbs, emits, and reflects electromagnetic radiation (energy) in a unique way, creating a distinctive spectral signature. This signature travels through space in forms of electromagnetic waves (EMW), which can be detected and measured by sensors.</p>
-<p>The broad electromagnetic spectrum ranges from long wavelengths, like radio waves, to short ones, like Gamma Ray or X-Ray (our eyes can only perceive just a small fraction of the spectrum!). Wavelength is key because it determines a. how waves scatter or reflect, b. how deeply they penetrate materials, and c.&nbsp;what type of information can be retrieved by passive sensors (those that detect energy that is naturally available on the Earth’s surface. I. e: optical satellites) and/or active sensors (those that emit their own electromagnetic signal and measure the energy that is reflected back. I. e. radar systems).</p>
-<p>However, the process of sensing is not straightforward as it seems. Electromagnetic waves interact with many environmental factors that affect how data is collected. For example, shadows, surface roughness, fluorescence, angles, illumination, etc. can significantly influence the outcomes.</p>
-<p>In addition, as EMW travels through the atmosphere, gases such as vapor, carbon dioxide and ozone absorb and/or scatter specific wavelengths (specially shorter wavelengths). This process, known as atmospheric transmission, determines how much radiation reaches the sensor.</p>
-<p>Finally, Earth observation data is primarily stored in raster formats, which consist of grid cells (pixels) that contain measured values. These datasets vary according to a. spatial resolution (the size of each pixel), b. spectral resolution (the number and width of recorded bands), c.&nbsp;temporal resolution (the frequency of sensor revisits), and d.&nbsp;radiometric resolution (the sensor’s sensitivity to differences in reflected energy). Data products also vary depending on the satellite’s orbital configuration, such as geostationary (the sensor remains fixed relative to the Earth’s surface), geosynchronous (the orbit matches the Earth’s rotation), and sun-synchronous (the satellite passes over the same location at approximately the same local time each day).</p>
-<p>Applications</p>
+<p><strong>Remote Sensing (or Earth observation)</strong> is the <strong>process of acquiring information about something from a distance.</strong></p>
+<p>Each material on the Earth’s surface absorbs, emits, and reflects <strong>electromagnetic radiation (energy)</strong> in a unique way, creating a distinctive <strong>spectral signature</strong>. This signature travels through space in forms of <strong>electromagnetic waves (EMW)</strong>, which can be detected and measured by <strong>sensors</strong>.</p>
+<p>The broad electromagnetic spectrum ranges from long wavelengths, like radio waves, to short ones, like Gamma Ray or X-Ray (our eyes can only perceive just a small fraction of the spectrum!). <strong>Wavelength</strong> is key because it <strong>determines a. how waves scatter or reflect, b. how deeply they penetrate materials, and c.&nbsp;what type of information can be retrieved by passive sensors</strong> (those that detect energy that is naturally available on the Earth’s surface. I. e: optical satellites) and/or <strong>active sensors</strong> (those that emit their own electromagnetic signal and measure the energy that is reflected back. I. e. radar systems).</p>
+<p>However, the process of sensing is not straightforward as it seems. <strong>EMW interact with many environmental factors</strong> that affect how data is collected. For example, shadows, surface roughness, fluorescence, angles, illumination, etc. can significantly influence the outcomes.</p>
+<p>In addition, <strong>as EMW travels through the atmosphere, gases such as vapour, carbon dioxide and ozone absorb and/or scatter specific wavelengths</strong> (specially shorter wavelengths). This process, known as <strong>atmospheric transmission</strong>, determines how much radiation reaches the sensor.</p>
+<p>Finally, <strong>Earth observation data is primarily stored in raster formats</strong>, which consist of grid cells (<strong>pixels</strong>) that contain measured values. These <strong>datasets vary according to</strong> a. <strong>spatial resolution</strong> (the size of each pixel), b. <strong>spectral resolution</strong> (the number and width of recorded bands), c.&nbsp;<strong>temporal resolution</strong> (the frequency of sensor revisits), and d.&nbsp;<strong>radiometric resolution</strong> (the sensor’s sensitivity to differences in reflected energy). <strong>Data products also vary depending on the satellites orbital configuration</strong>, such as geostationary (the sensor remains fixed relative to the Earth’s surface), geosynchronous (the orbit matches the Earth’s rotation), and sun-synchronous (the satellite passes over the same location at approximately the same local time each day).</p>
+<p><br></p>
+<section id="applications" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.1</span> Applications</h2>
 <p>Remote sensing data and tools are continuously expanding, along with their applications. As mentioned earlier, the various combinations of sensor characteristics, resolutions, and satellite configurations enable researchers to address diverse analytical questions and support decision-making in areas ranging from environmental monitoring to urban planning.</p>
-<p>One of the most common and longstanding uses of remote sensing is weather forecasting. Weather satellites are equipped with numerous sensors that measure atmospheric variables such as temperature and humidity, but also detect cloud cover, estimate wind speed and direction, and monitor weather events. For example, the National Meteorological Service (SMN) of Argentina has developed an experimental daily rainfall monitoring tool called SQPE-OBS (Satellite Quantitative Precipitation Estimation with Observations). This system combines satellite precipitation estimates from NASA’s IMERG dataset with ground-based weather station observations to produce more accurate estimates of accumulated precipitation across the southern cone.</p>
-<p>In the last decades, remote sensing tools have gained increasing importance as a source of up-to-date, large-scale, and high-quality data for risk management teams. In this context, satellite imagery is widely used for early warning, monitoring, and tracking environmental hazards, such as floods, droughts, heat waves, wildfires, and other extreme weather events, supporting emergency response and long-term resilience planning.</p>
-<p>One example of these initiatives is Geofuego, a comprehensive platform for monitoring forest, rural, and wildland fires in Argentina, developed by the Centro de Investigación y Extensión Forestal Andino Patagónico (CIEFAP) in collaboration with the Comisión Nacional de Actividades Espaciales (CONAE), Argentina’s National Meteorological Service (SMN), and the Ministry of Security of Argentina.</p>
-<p>Remote sensing imagery can also support economic development. For example, it can be used for monitoring agricultural productivity, identifying geological formations with mining potential, tracking urban expansion for real estate development, and selecting optimal locations for wind farms or solar energy facilities, among many other applications. If you want to learn more about these examples, you can have a look to the geoportal of the Infraestructura de Datos Espaciales de la Provincia de Córdoba (IDECOR).</p>
-<p>Finally, as economic activities expand, remote sensing can also serve as a valuable tool for public administration, including tax monitoring and the detection of (illegal) activities. In this sense, satellite sensors can observe areas that are otherwise difficult or costly to monitor through traditional methods, such as the open ocean. For example, the platform Global Fishing Watch uses night-time light imagery to detect and track illegal fishing activity in international waters.</p>
-<p>Final thoughts</p>
-<p>Earth Observation is worth trying. The growing availability of satellite products, combined with increasingly high-quality and up-to-date data, makes remote sensing a valuable resource for decision-making. The possibilities are vast. It can provide insights that support evidence-based policies at both national and subnational levels. At the urban scale, this is particularly relevant, as it opens new opportunities for local governments to manage cities more effectively, for example by measuring urban expansion, monitoring land-use changes, detecting illegal dumping, or analyzing traffic patterns. However, (and we must be sincere) remote sensing is not a bed of roses. Earth observation requires specialized technical skills and knowledge that are not always easy to acquire. This expertise remains relatively scarce, particularly in developing countries where data gaps are often greater and where many of the environmental and urban challenges that will shape the future of the planet are unfolding.</p>
+<p>One of the most common and long-standing uses of remote sensing is <strong>weather forecasting</strong>. Weather satellites are equipped with numerous sensors that measure atmospheric variables such as temperature and humidity, but also detect cloud cover, estimate wind speed and direction, and monitor weather events. For example, the <a href="https://ws2.smn.gob.ar/">National Meteorological Service (SMN) of Argentina</a> has developed an experimental daily rainfall monitoring tool called <strong>SQPE-OBS (Satellite Quantitative Precipitation Estimation with Observations)</strong>. This system combines satellite precipitation estimates from NASA’s IMERG dataset with ground-based weather stations observations to produce more accurate estimates of accumulated precipitation across the southern cone.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week1/smn.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="284"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the last decades, remote sensing tools have gained increasing importance as a source of up-to-date, large-scale, and high-quality data for risk management teams. In this context, satellite imagery is widely used for <strong>early warning, monitoring, and tracking environmental hazards</strong>, such as floods, droughts, heat waves, wildfires, and other extreme weather events, supporting emergency response and long-term resilience planning.</p>
+<p>One example of these initiatives is <a href="https://manejodelfuego.conae.gov.ar/">Geofuego</a>, a comprehensive platform for monitoring forest, rural, and wildland fires in Argentina, developed by the <a href="https://www.argentina.gob.ar/ciencia/sact/cites/ciefap">Centro de Investigación y Extensión Forestal Andino Patagónico (CIEFAP)</a> in collaboration with the <a href="https://www.argentina.gob.ar/ciencia/conae">Comisión Nacional de Actividades Espaciales (CONAE)</a>, Argentina’s National Meteorological Service (SMN), and the Ministry of Security of Argentina.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week1/geofuego.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="650"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Remote sensing imagery can also support <strong>economic development</strong>. For example, it can be used for monitoring agricultural productivity, identifying geological formations with mining potential, tracking urban expansion for real estate development, and selecting optimal locations for wind farms or solar energy facilities, among many other applications. If you want to learn more about these examples, you can have a look to the <a href="https://www.idecor.gob.ar/mapas-cordoba/">geoportal</a> of the <a href="https://www.idecor.gob.ar/">Infraestructura de Datos Espaciales de la Provincia de Córdoba (IDECOR)</a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week1/idecor.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="354"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Finally, as economic activities expand, remote sensing can also serve as a valuable tool for <strong>public administration</strong>, including <strong>tax monitoring and the detection of (illegal) activities</strong>. In this sense, satellite sensors can observe areas that are otherwise difficult or costly to monitor through traditional methods, such as the open ocean. For example, the platform <a href="https://globalfishingwatch.org/">Global Fishing Watch</a> uses night-time light imagery to detect and track illegal fishing activity in international waters.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week1/gfw.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="354"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="final-thoughts" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="final-thoughts"><span class="header-section-number">1.2</span> Final Thoughts</h2>
+<p>Earth Observation is worth trying. The growing availability of satellite products, combined with increasingly high-quality and up-to-date data, makes remote sensing a valuable resource for decision-making. The possibilities are vast. It can provide insights that support evidence-based policies at both national and subnational levels. At the urban scale, this is particularly relevant, as it opens new opportunities for local governments to manage cities more effectively, for example, by measuring urban expansion, monitoring land-use changes, detecting illegal dumping, or analyzing traffic patterns.</p>
+<p>However, (and we must be sincere) remote sensing is not a bed of roses. Earth observation requires specialized technical skills and knowledge that are not always easy to acquire. This expertise remains relatively scarce, particularly in developing countries where data gaps are often greater and where many of the environmental and urban challenges that will shape the future of the planet are unfolding.</p>
 <p>In addition, although the cost of satellite data and processing tools has been decreasing, not all countries have the technological capacity or financial resources to develop and operate their own satellite infrastructure. Many therefore depend on data provided by international space agencies or external institutions.</p>
 <p>This raises another important challenge: the long-term openness of Earth observation data. Today, several international and governmental agencies, such as NASA, Copernicus, or CONAE, open large volumes of satellite imagery for free. Will it be the same in the future? As demand for raster data continues to grow due to its analytical and economic value, satellite imagery may become an increasingly strategic resource. This could raise concerns related to data governance, security, and access. If these datasets were to become restricted or commercialized, many researchers, institutions, and governments (particularly in developing regions) could face new barriers to accessing critical spatial information.</p>
 <p>Let’s be optimistic! Despite these challenges, remote sensing represents a major opportunity today, particularly for filling persistent data gaps and supporting more informed spatial decision-making.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -606,8 +663,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./index.html" class="pagination-link" aria-label="About me">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About me</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

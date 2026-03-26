@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./class8.html" rel="next">
+<link href="./class6.html" rel="next">
 <link href="./class4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">About me</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./class3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week - No one is perfect - Imagery Calibration and Enhancement</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week - No one is perfect: Imagery Calibration and Enhancement</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -146,8 +146,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./class6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week - Can we apply machine learning to remote sensing? [YES] | no</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./class8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span></a>
   </div>
 </li>
     </ul>
@@ -161,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#applications" id="toc-applications" class="nav-link active" data-scroll-target="#applications"><span class="header-section-number">5.1</span> Applications</a></li>
-  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts"><span class="header-section-number">5.2</span> Final thoughts</a></li>
+  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts"><span class="header-section-number">5.2</span> Final Thoughts</a></li>
   </ul>
 </nav>
     </div>
@@ -188,28 +194,71 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><br></p>
-<p>Google Earth Engine (GEE) has become one of the most popular platforms for geospatial analysis these days. It is a powerful and freely accessible cloud-based geospatial processing system that integrates a huge catalogue of Earth observation data, high-performance cloud computing infrastructure, and programming capabilities through JavaScript and Python. Let’s dive into deep:</p>
-<p>To begin with, a key component of GEE is its massive public data catalogue, which includes a wide range of Earth observation datasets from a variety of widely used satellite imaging systems (like Landsat or Sentinel) across all sorts of spectral wavelengths, but also environmental, climatic, topographic and socio-economic datasets.</p>
-<p>Through GEE, users can access valuable data such as night-time lights, floods records, daily temperatures, etc. These datasets are preloaded within the platform, allowing users to easily access and analyse large volumes of geospatial information without the need for local storage or complex data management. Additionally, users can upload and integrate their own datasets.</p>
-<p>Most datasets are preprocessed and stored in a ready-to-use format that preserves the original information while reducing many of the barriers associated with data management. The platform relies on a data model based on raster images and image collections, which enables efficient filtering, sorting, and analysis of large datasets according to spatial and temporal criteria.</p>
-<p>Another key point of the platform is that its analytical capabilities rely on distributed parallel processing and a lazy computation model, which allows the system to automatically subdivide and distribute computational tasks across multiple servers. Through its API and web-based interactive development environment, users can smoothly perform a wide range of spatial operations, including filtering, subsetting, joins, clipping, zonal statistics, and image classification. In addition, advanced analytical techniques, such as machine learning, deep learning, supervised and unsupervised classification, can be applied to study spatial patterns at different scales.</p>
-<p>Despite its many advantages, it should be noted that GEE also presents some limitations. First, as it is provided by a private company, there are processing quotas, restrictions on system usage, and other limitations that have become more common as the platform has become popular. These constraints raise concerns about unrestricted access to the platform in the future.</p>
-<p>Additionally, the requirement to adapt existing algorithms to the GEE API may represent a challenge for some users. Also, operations that involve intensive iterative computation or rely on large datasets not already available within the platform can also present additional technical difficulties.</p>
+<p><a href="https://earthengine.google.com/">Google Earth Engine (GEE)</a> has become one of the most popular platforms for geospatial analysis these days. It is a powerful and freely accessible <strong>cloud-based geospatial processing system</strong> that integrates a yuge catalogue of Earth observation data, high-performance cloud computing infrastructure, and programming capabilities through JavaScript and Python. Let’s dive into deep:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week5/portada.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="959"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>To begin with, a <strong>key component of GEE is its massive public data <a href="https://developers.google.com/earth-engine/datasets/catalog">catalogue</a></strong>, which includes a wide range of Earth observation datasets from a variety of widely used satellite imaging systems (like Landsat or Sentinel) across all sorts of spectral wavelengths, but also environmental, climatic, topographic and socio-economic datasets, like night-time lights, floods records, daily temperatures, etc. These <strong>datasets are preloaded and preprocessed within the platform, allowing users to easily access and analyse large volumes of geospatial information without the need for local storage or complex data management</strong>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week5/catalog.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="948"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Another key point of the platform is that its analytical capabilities <strong>rely on parallel processing and lazy computation models, which reduce processing times drastically</strong>. In this context, <strong>users can smoothly perform a wide range of spatial operations</strong>, including filtering, subsetting, joins, clipping, zonal statistics, and image classification, taking advantage of its API and web-based interactive development environment. In addition, advanced analytical techniques, such as <strong>machine learning, deep learning, supervised and unsupervised classification, can be applied</strong> to study spatial patterns at different scales.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week5/gee.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="959"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Despite its many advantages, we should reckon that GEE also presents some <strong>limitations</strong>. First, as it is provided by a private company, there are <strong>processing quotas, restrictions on system usage, and other limitations that have become more common as the platform has become popular</strong>. These constraints raise concerns about unrestricted access to the platform in the future.</p>
+<p>Additionally, the <strong>requirement to adapt existing algorithms to the GEE API</strong> may represent a challenge for some users. Also, operations that involve intensive iterative computation or rely on large datasets not already available within the platform can also present additional technical difficulties.</p>
+<p><br></p>
 <section id="applications" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.1</span> Applications</h2>
 <p>Google Earth Engine is winning a place between the most popular tools in remote sensing due to its key features (easy access to heavy geospatial datasets, high computational power, integration with other platforms and apps, etc.), supporting a wide range of applications including forest monitoring, crop yield estimation, flood mapping, climate analysis, etc.</p>
-<p>In this context, several studies have highlighted the strength of GEE in comparison with other well-established tools in the field. One example is “Wet snow detection in Patagonian Andes with Sentinel-1 SAR temporal series analysis in GEE” (Beltramone et al, 2020). In this article, the authors explore the application of Sentinel-1 SAR satellite imagery within the GEE platform for monitoring wet snow conditions in the Argentinian Andes.</p>
-<p>Focusing on polygons near Bariloche, the analysis shows that terrain characteristics, such as topography, angles and slope orientation, play an important role in influencing radar signal responses. More importantly, Beltramone et al (2020) assess the reliability of GEE’s automated processing by comparing it with more labor-intensive manual approaches (such as SNAP), obtaining comparable or even better results. Overall, the findings indicate that GEE provides a cost-efficient and effective alternative to hazardous field observations for supporting water resource management and improving natural hazard prediction.</p>
-<p>In some cases, the improvements in precision and efficiency provided by GEE can lead to highly valuable outcomes for decision-making. An example is “Evaluación de incendios en áreas periurbanas de la ciudad de Corrientes (Argentina) durante la sequía extrema del año 2020” (Smichowski et al, 2021). In this work, the authors examine the consequences of large-scale wildfires that affected peri-urban areas of the city of Corrientes, Argentina, during the drought of 2020 by combining Sentinel-2A satellite imagery with GEE.</p>
-<p>By identifying an optimal detection threshold, the analysis revealed that more than 21% of the land vulnerable to fire was affected, a figure considerably higher than official government estimates. In addition, the authors developed a Fire Density Index to better quantify fire magnitude by taking advantage of GEE’s capabilities. Overall, the study highlights the importance of GEE for generating accurate spatial information to support effective fire risk management and ecosystem restoration.</p>
+<p>In this context, several studies have highlighted the strength of GEE in comparison with other well-established tools in the field. One example is “<em>Wet snow detection in Patagonian Andes with Sentinel-1 SAR temporal series analysis in GEE</em>” by <a href="https://ieeexplore.ieee.org/document/9505487">Beltramone et al (2020)</a>. In this article, the authors explore the application of Sentinel-1 SAR satellite imagery within the GEE platform for monitoring wet snow conditions in the Argentinian Andes by comparing it with more labor-intensive manual approaches (such as <a href="https://earth.esa.int/eogateway/tools/snap">The Sentinel Application Platform - SNAP</a>). In overall, the findings indicate that <strong>GEE provides a cost-efficient and effective alternative to hazardous field observations and SNAP for supporting water resource management and improving natural hazard prediction</strong>. Such findings are particular important because time is key when dealing with crisis.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week5/beltramel.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="260"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In some cases, the improvements in precision and efficiency provided by GEE can lead to highly valuable outcomes for decision-making. In 2021, <a href="https://ri.conicet.gov.ar/handle/11336/183116">Smichowski et al.</a>, in their work “<em>Evaluación de incendios en áreas periurbanas de la ciudad de Corrientes (Argentina) durante la sequía extrema del año 2020</em>”, examined the consequences of large-scale wildfires that affected peri-urban areas of Corrientes, Argentina, during the drought of 2020 by combining Sentinel-2A satellite imagery with GEE. By identifying an optimal detection threshold, the <strong>analysis revealed that more than 21% of the land vulnerable to fire was affected, a figure considerably higher than official government estimates</strong>. In addition, the authors developed a <strong>Fire Density Index</strong> to better quantify fire magnitude by taking advantage of GEE’s capabilities. In my opinion, the study highlights the virtues of GEE (over the traditional tools) for generating accurate spatial information to support effective decition-making, specially within the fields of fire risk management and ecosystem restoration</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/week5/smichowski.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="412"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br></p>
 </section>
 <section id="final-thoughts" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="final-thoughts"><span class="header-section-number">5.2</span> Final thoughts</h2>
+<h2 data-number="5.2" class="anchored" data-anchor-id="final-thoughts"><span class="header-section-number">5.2</span> Final Thoughts</h2>
 <p>Google Earth Engine is the Ferrari of Earth observation tools. It is big (with enormous storage capacity), fast (an extremely powerful computational engine), elegant (it allows the creation of attractive visualizations), and ultimately an impressive piece of engineering (behind its relatively simple interface lies an extremely complex system that most users ignore).</p>
 <p>There is no doubt that, as cloud computing and artificial intelligence continue to evolve, the platform will play an increasingly important role in global environmental monitoring and geospatial analysis. For instance, Could we monitor how cities grow in almost real time? Could we predict school abandonment using roof materials? Could local governments tax properties on the volume of their swimming pools?</p>
-<p>Now, I want to ask you something: How long can a Ferrari remain freely available to everyone? Owning a Ferrari at the beginning of the last century would have made little sense without the infrastructure needed to sustain it (roads, fuel, and maintenance systems). The automobile shape the city and the city shape the car. Similarly, GEE relies on massive infrastructure and resources. As its capabilities expand and its applications become increasingly valuable, maintaining unrestricted access may become more challenging.</p>
-<p>The economic and practical applications of GEE continue to grow. The platform is becoming easier to integrate into other tools and services, its user community expands every day, and Mr.&nbsp;Google continues to invest enormous computational resources and expertise into its development. I bet you that, while you read this, it is taking place a high important meeting at Silicon Valley where a sharp dressed man is asking “Who is paying the bill for all of this?”</p>
-<p>Business as usual. As many grandmothers wisely say, we should never take things for granted. GEE gives us an unprecedented power, and with great power comes great responsibility. So, use it wisely! Run fast to create new geospatial solutions for the most thrilling challenges of this world!</p>
+<p>Now, I want to ask you something: How long can a Ferrari remain freely available to everyone? Owning a Ferrari at the beginning of the last century would have made little sense without the infrastructure needed to sustain it (roads, fuel, and maintenance systems). The automobile shaped the city and the city shaped the car. Similarly, GEE relies on massive infrastructure and resources. As its capabilities expand and its applications become increasingly valuable, maintaining unrestricted access may become more challenging.</p>
+<p>The economic and practical applications of GEE continue to grow. The platform is becoming easier to integrate into other tools and services, its user <a href="https://gee-community-catalog.org/">community</a> expands every day, and Mr.&nbsp;Google continues to invest enormous computational resources and expertise into its development. I bet you that, while you read this, it is taking place a high important meeting at Silicon Valley where a sharp dressed man is asking “Who is paying the bill for all of this?”</p>
+<p>Business as usual. As my grandmother wisely says “<em>we should never take things for granted</em>”. GEE gives us an unprecedented power, and with great power comes great responsibility too. So, use it wisely! Run fast to create new geospatial solutions for the most thrilling challenges of this world before it’s too late!</p>
 
 
 </section>
@@ -622,8 +671,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./class8.html" class="pagination-link" aria-label="Week - This is the end, but don’t be SAR: Synthetic Aperture Radar">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./class6.html" class="pagination-link" aria-label="Week - Can we apply machine learning to remote sensing?  [YES] | no">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week - Can we apply machine learning to remote sensing? [YES] | no</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
