@@ -20,9 +20,9 @@ Apart from corrections, **satellite images can be enhanced through aesthetic man
 
 ## Applications
 
-Imagery correction and enhancement are fundamental and widely applied procedures in remote sensing. Omitting these processes can produce significantly biased results, as demonstrated by [Paoli et al. (2006)](https://www.tandfonline.com/doi/full/10.1080/01431160500183057) in their study “*Radiometric correction effects in Landsat multidate/multi-sensor change detection studies*”. In this work, the authors compare absolute and relative correction methods using multiple Landsat TM and ETM+ images of the Argentinian northwestern jungles, the \*Yungas\*\*. Their results show that using uncorrected imagery for environmental change detection may produce unrealistic change estimates, reaching values two to three times higher than those obtained from corrected images. In this fashion, the authors conclude that radiometric and atmospheric corrections are essential for reliable multi-sensor change detection and for ensuring consistent data comparison across time.
+Imagery correction and enhancement are fundamental and widely applied procedures in remote sensing. Omitting these processes can produce significantly biased results, as demonstrated by [Paoli et al. (2006)](https://www.tandfonline.com/doi/full/10.1080/01431160500183057) in their study “*Radiometric correction effects in Landsat multidate/multi-sensor change detection studies*”. In this work, the authors compare absolute and relative correction methods using multiple Landsat TM and ETM+ images of the Argentinian northwestern jungles, the *Yungas*. Their results show that using uncorrected imagery for environmental change detection may produce unrealistic change estimates, reaching values two to three times higher than those obtained from corrected images. In this fashion, the authors conclude that radiometric and atmospheric corrections are essential for reliable multi-sensor change detection and for ensuring consistent data comparison across time.
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, out.width="75%", fig.cap="Source: Paoli et al. (2006)"}
 knitr::include_graphics("images/week3/Paoli.jpg")
 ```
 
@@ -30,7 +30,7 @@ For reasons like the stated above, many satellite imagery datasets are now distr
 
 However (oh no!), as the number and diversity of remote sensing products increases, selecting the most appropriate datasets, corrections, and analytical methods becomes increasingly important. For example, in the study “*Evaluating the performance of multiple remote sensing indices to predict the spatial variability of ecosystem structure and functioning in Patagonian steppes*”, [Gaitán et al. (2013)](https://www.sciencedirect.com/science/article/pii/S1470160X13002033?casa_token=ths_c3JZGd0AAAAA:VJm5SXOayia8wchqOwVsmYew9TtBYq-YLRgTse0wLzQXj5LyOpOKJXGMl8LmgrFJ6ULmUVMKmJc) investigate the use of satellite-based vegetation indices to monitor the health and structure of dryland ecosystems in southern Argentina. The researchers compared nine (yes, nine!) different vegetation indices derived from MODIS data against ground-level measurements of plant diversity, vegetation cover, and soil functionality. These indexes are not other than different variations of band ratios designed to emphasize specific spectral characteristics of ground features. The results indicate that the Normalized Difference Vegetation Index (NDVI) was the most effective tool for predicting spatial variability in vegetation and nutrient cycling. Nevertheless, each index may therefore be suitable for other particular research questions or environmental conditions.
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, out.width="85%", fig.cap="Source: Gaitán et al. (2013)"}
 knitr::include_graphics("images/week3/gaitan.jpg")
 ```
 

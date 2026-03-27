@@ -4,7 +4,7 @@
 
 [Greater Rosario](https://www.google.com/maps/place/Rosario,+Santa+Fe,+Argentina/@-32.9520382,-60.7783419,22264m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95b6539335d7d75b:0xec4086e90258a557!8m2!3d-32.9587022!4d-60.6930416!16zL20vMDJ0YjE3?entry=ttu&g_ep=EgoyMDI2MDMyMy4xIKXMDSoASAFQAw%3D%3D) is the third-largest metropolitan area in Argentina, after Buenos Aires and Córdoba, with a population of approximately 1.5 million people according to the most recent [national census (2022)](https://www.indec.gob.ar/indec/web/Nivel4-Tema-2-41-165). It is also one of the country's main economic centers and home to one of the world’s most important agricultural export ports.
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, fig.cap="Source: Google Maps"}
 knitr::include_graphics("images/week4/rosario.jpg")
 ```
 
@@ -14,7 +14,7 @@ One of the main responsibilities of ECOM is the development of the [Metropolitan
 
 Open dumps are **sites where solid waste is disposed of indiscriminately, without operational control or adequate environmental safeguards**, reflecting significant deficiencies in municipal waste management systems. As a result, these sites **pose serious health and environmental risks**, particularly for vulnerable communities, as they contaminate soil, groundwater, and air. They can also disrupt plant life cycles, foster the proliferation of pests and disease vectors, release toxic substances and pollutants into the air, and increase greenhouse gas emissions.
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, fig.cap="Source: Diario La Razón"}
 knitr::include_graphics("images/week4/microbasural.jpg")
 ```
 
@@ -34,13 +34,13 @@ One relevant example is an [open-source tool](https://fractalargentina.org/herra
 
 The landfill detector is based on a **convolutional neural network that analyses aerial imagery to identify waste at the pixel level**. Unlike large open-air dumping sites, which can often be detected using freely available satellite imagery, micro landfills occupy relatively small areas and therefore require high-resolution aerial images, such as those captured by drone flights.
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, out.width="85%", fig.cap="Source: Bunge & Born"}
 knitr::include_graphics("images/week4/modelo.jpg")
 ```
 
-For this reason, the detector primarily uses data from [OpenAerialMap](https://openaerialmap.org/), an online service that allows users to search for and download freely available aerial imagery collected by drones and aircraft, with a (super high) spatial resolution of at least 3 cm by pixel (!!!). However, the model can also be adapted to satellite imagery. For example, a previous model developed by Maria Roberta [Devesa and Antonio Vazquez Brust (2021)](talargentina.org/wp-content/uploads/2025/10/Mapping-illegal-waste-dumping-sites-with-neural-network-classification-of-satellite-imagery-2021.pdf) was used to identify open-air landfills in the Province of Buenos Aires using six-band images from Sentinel-2: three visible color bands (RGB), a near-infrared (NIR) band, a shortwave infrared (SWIR-1) band, and the normalized difference between the two SWIR bands.
+For this reason, the detector primarily uses data from [OpenAerialMap](https://openaerialmap.org/), an online service that allows users to search for and download freely available aerial imagery collected by drones and aircraft, with a (super high) spatial resolution of at least 3 cm by pixel (!!!). However, the model can also be adapted to satellite imagery. For example, a previous model developed by [Maria Roberta Devesa and Antonio Vázquez Brust (2021)](talargentina.org/wp-content/uploads/2025/10/Mapping-illegal-waste-dumping-sites-with-neural-network-classification-of-satellite-imagery-2021.pdf) was used to identify open-air landfills in the Province of Buenos Aires using six-band images from Sentinel-2: three visible color bands (RGB), a near-infrared (NIR) band, a shortwave infrared (SWIR-1) band, and the normalized difference between the two SWIR bands.
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, out.width="75%", fig.cap="Source: Devesa & Vázquez Brust (2021)"}
 knitr::include_graphics("images/week4/buenos_aires.jpg")
 ```
 

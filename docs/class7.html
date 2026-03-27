@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Week - No one is perfect: Imagery Calibration and Enhancement – soubie_chronicles</title>
+<title>7&nbsp; Week - Machine Learning Vol. II: Pixel-Based vs Object-Based Methods and Some of Accuracy – soubie_chronicles</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./class4.html" rel="next">
-<link href="./class2.html" rel="prev">
+<link href="./class8.html" rel="next">
+<link href="./class6.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./class3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week - No one is perfect: Imagery Calibration and Enhancement</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./class7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week - Machine Learning Vol. II: Pixel-Based vs Object-Based Methods and Some of Accuracy</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./class3.html" class="sidebar-item-text sidebar-link active">
+  <a href="./class3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week - No one is perfect: Imagery Calibration and Enhancement</span></span></a>
   </div>
 </li>
@@ -152,8 +152,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./class7.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week - Machine Learning Vol. II: Pixel-Based vs Object-Based Methods and Some of Accuracy</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./class8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span></a>
   </div>
 </li>
     </ul>
@@ -166,8 +172,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#applications" id="toc-applications" class="nav-link active" data-scroll-target="#applications"><span class="header-section-number">3.1</span> Applications</a></li>
-  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts"><span class="header-section-number">3.2</span> Final Thoughts</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link active" data-scroll-target="#applications"><span class="header-section-number">7.1</span> Applications</a></li>
+  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts"><span class="header-section-number">7.2</span> Final Thoughts</a></li>
   </ul>
 </nav>
     </div>
@@ -176,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week - No one is perfect: Imagery Calibration and Enhancement</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week - Machine Learning Vol. II: Pixel-Based vs Object-Based Methods and Some of Accuracy</span></h1>
 </div>
 
 
@@ -194,51 +200,27 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><br></p>
-<p>One of the most fascinating things with remote sensing is that you can create multiple <strong>subproducts</strong> from the same dataset. However, we have to bear something important in mind: <strong>raw satellite imagery rarely represents the Earth’s surface accurately</strong> because distortions may arise from <strong>sensor limitations, atmospheric conditions or terrain effects</strong>. For that reason, how we account errors and flaws and how we interpret the results are key parts of the remote sensing process.</p>
-<p>We have <strong>four ways in which we can calibrate our imagery</strong>:</p>
-<ul>
-<li><p><strong>Geometric correction</strong> aligns images with real-world coordinates by using ground control points and geometric transformations to correct <strong>distortions in shape, position, size, or orientation of features</strong> caused by sensor angle, platform movement or Earth curvature. These types of corrections are particularly useful when working with urban planning and infrastructure monitoring.</p></li>
-<li><p><strong>Orthorectification</strong> incorporates elevation data to correct <strong>topographic distortions</strong> and ensures that each pixel corresponds to its <strong>true geographic location</strong> in terms of height, angle, and elevation while displayed in 90° windows (nadir view). This is key when working with complex terrains, like mountains.</p></li>
-<li><p><strong>Radiometric correction</strong> addresses <strong>variations in sensor response and illumination conditions</strong>. Originally, sensors store measurements as <strong>Digital Numbers</strong> (the intensity of electromagnetic radiation per pixel). What radiometric calibration does is to convert them into <strong>spectral radiance</strong> (or the amount of light within a band from the center in the field of view) which is a more useful unit for analysis, and ultimately, turn them into <strong>reflectance values</strong>, which are standardizes and allows comparisons. Radiometric correction may be very useful for long-term vegetation change, desertification, glacier melting, etc.</p></li>
-<li><p><strong>Atmospheric correction</strong> removes the <strong>effects of scattering and absorption caused by the atmosphere</strong>. These corrections can be relative to a pixel (like <strong>Dark Object Subtraction</strong>) or to a consistent feature (like <strong>Pseudo-Invariant Features</strong>), or absolute through atmospheric models (like <strong>FLAASH</strong>) or through ground-based measurements (like <strong>Empirical Line Calibration</strong>). Probably, you may have a look at them while working with imagery of cloudy cities, such as Puerto Argentino.</p></li>
-</ul>
-<p>Apart from corrections, <strong>satellite images can be enhanced through aesthetic manipulation to improve visual interpretation and highlight specific features without modifying pixel values</strong>. Common techniques include <strong>contrast enhancement</strong> to increase feature visibility, <strong>band ratios</strong> to emphasize spectral differences, <strong>spatial filtering</strong> to smooth or sharpen details, <strong>principal component analysis</strong> to reduce redundancy, <strong>texture analysis</strong> to detect spatial patterns, and <strong>data fusion</strong> to integrate complementary datasets.</p>
+<p>This week we continue exploring machine learning methods applied to Earth observation data, focusing on different types of classifications and how to properly assess their accuracy.</p>
+<p>There are different ways in which we can improve our machine learning models in Earth observation. For example, instead of using a pixel-by-pixel approach, we can work with <strong>Object-Based Image Analysis (OBIA)</strong>. These approaches combine similar pixels into objects in a clustering-like fashion, generally using two hyperparameters: the spatial distance between pixels and the homogeneity of their colors (superpixels). This is super interesting because it aligns more naturally with how we perceive the world: in objects, not pixels. However, the choice of parameter values remains somewhat subjective.</p>
+<p>Another approach is <strong>Sub-Pixel Analysis</strong>, which works on the assumption that each pixel is a combination of spectrally pure land cover types (water, bare soil and vegetation) known as “endmembers”. Rather than assigning a single class, this approach estimates the proportion of each land cover within a pixel. The main problem is that truly pure endmembers are nearly impossible to find in practice, as there is almost always some spectral contamination.</p>
+<p>In respect to <strong>accuracy</strong>, Earth observation models can be evaluated through Producer Accuracy (recall), User Accuracy (precision), and Overall Accuracy. An important limitation is that neither producer nor user accuracy considers true negatives and, more fundamentally, you can’t maximize both at the same time, as shifting the decision threshold always benefits one at the expense of the other.</p>
+<p>Finally, a critical issue in spatial machine learning is <strong>autocorrelation</strong> between training and test sets. Since nearby pixels tend to be more similar, random cross-validation can inadvertently leak information between sets, inflating accuracy. <strong>Spatial cross-validation</strong> addresses this by applying spatial partitioning techniques (like good old Moran’s I) to ensure training and test data are geographically separated. Interestingly, object-based methods tend to show lower apparent accuracy than pixel-based ones precisely for this reason: merging pixels into objects naturally reduces spatial leakage.</p>
+<p>My recommendation: every time you run a machine learning model on spatial imagery, don’t forget to check for spatial autocorrelation!</p>
 <p><br></p>
-<section id="applications" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.1</span> Applications</h2>
-<p>Imagery correction and enhancement are fundamental and widely applied procedures in remote sensing. Omitting these processes can produce significantly biased results, as demonstrated by <a href="https://www.tandfonline.com/doi/full/10.1080/01431160500183057">Paoli et al.&nbsp;(2006)</a> in their study “<em>Radiometric correction effects in Landsat multidate/multi-sensor change detection studies</em>”. In this work, the authors compare absolute and relative correction methods using multiple Landsat TM and ETM+ images of the Argentinian northwestern jungles, the <em>Yungas</em>. Their results show that using uncorrected imagery for environmental change detection may produce unrealistic change estimates, reaching values two to three times higher than those obtained from corrected images. In this fashion, the authors conclude that radiometric and atmospheric corrections are essential for reliable multi-sensor change detection and for ensuring consistent data comparison across time.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/week3/Paoli.jpg" class="img-fluid figure-img" style="width:75.0%"></p>
-<figcaption>Source: Paoli et al.&nbsp;(2006)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>For reasons like the stated above, many satellite imagery datasets are now distributed as preprocessed collections with standardized processing levels, which facilitate large-scale analysis and ensure greater data consistency. In this context, <strong>satellite imagery is commonly organized into “collections”</strong>, which group images according to their processing standards. These collections are further divided into “<strong>levels</strong>” that represent specific data products, while levels may also be classified into “<strong>tiers</strong>” that indicate different data quality and processing reliability. As a result, we can access a wide variety of satellite imagery products tailored to different analytical needs and research objectives (so good!).</p>
-<p>However (oh no!), as the number and diversity of remote sensing products increases, selecting the most appropriate datasets, corrections, and analytical methods becomes increasingly important. For example, in the study “<em>Evaluating the performance of multiple remote sensing indices to predict the spatial variability of ecosystem structure and functioning in Patagonian steppes</em>”, <a href="https://www.sciencedirect.com/science/article/pii/S1470160X13002033?casa_token=ths_c3JZGd0AAAAA:VJm5SXOayia8wchqOwVsmYew9TtBYq-YLRgTse0wLzQXj5LyOpOKJXGMl8LmgrFJ6ULmUVMKmJc">Gaitán et al.&nbsp;(2013)</a> investigate the use of satellite-based vegetation indices to monitor the health and structure of dryland ecosystems in southern Argentina. The researchers compared nine (yes, nine!) different vegetation indices derived from MODIS data against ground-level measurements of plant diversity, vegetation cover, and soil functionality. These indexes are not other than different variations of band ratios designed to emphasize specific spectral characteristics of ground features. The results indicate that the Normalized Difference Vegetation Index (NDVI) was the most effective tool for predicting spatial variability in vegetation and nutrient cycling. Nevertheless, each index may therefore be suitable for other particular research questions or environmental conditions.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/week3/gaitan.jpg" class="img-fluid figure-img" style="width:85.0%"></p>
-<figcaption>Source: Gaitán et al.&nbsp;(2013)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>Together, these studies show that <strong>remote sensing applications depend not only on data availability but also on careful selection of corrections, indices, and methods</strong>, ensuring that satellite imagery produces reliable, meaningful insights for environmental monitoring and analysis.</p>
+<section id="applications" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.1</span> Applications</h2>
+<p>In remote sensing, we can work with different pre classified products from various sources. One recent and interesting open-access initiative is <a href="https://dynamicworld.app/">Dynamic World</a>, a near real-time 10m land cover product built on Sentinel-2 imagery using a fully convolutional neural network. Tools like this can be really powerful and save us a lot of time.</p>
+<p>However, we have to bear in mind that sometimes these pre-classified products aggregate too many things together, making data less imprecise for local context. For example, <a href="https://www.mdpi.com/2072-4292/14/16/4101">Venter et al.&nbsp;(2022)</a>, in their study “<em>Global 10 m Land Use Land Cover Datasets: A Comparison of Dynamic World, World Cover and Esri Land Cover</em>” compare Dynamic World, ESA WorldCover, and ESRI Land Cover to see how good they perform using the same ground truth dataset. Their results showed that Esri had the highest overall accuracy (75%) compared to Dynamic World (72%) and WorldCover (65%), and that all three products showed strong spatial correspondence for water, built areas, and tree cover, but diverged significantly for other classes. As we mentioned before, this example should attract our attention when using global indexes as their aggregated nature and rigid class classification may underestimate local realities.</p>
+<p>In respect to the discussion whether object-based or pixel-based approaches deliver better results, <a href="https://www.mdpi.com/2072-4292/14/15/3744">Yan et al.&nbsp;(2022)</a>, in their study “<em>Comparing Object-Based and Pixel-Based Methods for Local Climate Zones Mapping with Multi-Source Data</em>”, compared both methods for Local Climate Zone mapping in Chinese cities. Their results showed that the object-based methods perform better than pixel-based classifications, with overall accuracy higher by approximately 2% and 5% depending on the spatial resolution used. However, it’s worth mentioning that the advantage was not uniform across all land cover types, which is a good reminder that there is no single “best” approach. At the end, the choice between pixel and object-based analysis depends heavily on what you are trying to map and at what resolution. Also, this paper is interesting because, as we’ve seen, object-based methods tend to be less accurate than pixel-based ones when spatial autocorrelation is not accounted for. This suggests that the real performance gap between those methods in this study could be even larger than reported.</p>
 <p><br></p>
 </section>
-<section id="final-thoughts" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="final-thoughts"><span class="header-section-number">3.2</span> Final Thoughts</h2>
-<p>Remote sensing offers an endless range of possibilities. The combination of different data formats, spatial and temporal resolutions, processing scales, corrections, and enhancements applied to satellite imagery allows users to generate highly specialized products capable of addressing very specific questions.</p>
-<p>However, achieving these results is far more complex than it sounds. The ability to create multiple products from the same dataset implies that numerous processing steps and methodological decisions must be carefully considered, as well as the technical complexity of the techniques involved. For instance, the order in which image corrections are applied is not arbitrary. Applying a topographic correction before or after an atmospheric correction can produce substantially different results, highlighting the importance of methodological rigour in remote sensing workflows. Ultimately, what truly matters is not the ability to generate an infinite number of remote sensing products, but rather the capacity to accurately interpret remotely sensed data and to compare it consistently across time and space.</p>
-<p>But don’t thrill yourself! <strong>My recommendation: Stick to the classics and grasp the basics of linear regression</strong>. Many of the calibrations and enhancements we have just seen rely on the application of linear regression models, where coefficients represent the rate of change between the real values and the expected ones.</p>
-<p>Finally, it is important to recognize that advanced image enhancement and calibration techniques can be computationally demanding, particularly when applied to large spatial datasets. However, recent technological developments provide strong reasons to be optimistic. In recent years, powerful platforms such as <a href="https://earthengine.google.com/">Google Earth Engine</a> have enabled analysis of massive volumes of satellite imagery, expanding the scale at which remote sensing studies can be conducted.</p>
-<p>What does the future hold for us? As computational power, data availability, and spatial resolution continue to improve, the potential applications of remote sensing are likely to expand even further. Could the day come when we are able to analyze the world’s soils at planetary scale, using spatial indices to identify the specific parcels of land capable of maximizing food production? Might such advances bring us closer (at least, theoretically) to overcoming global hunger? It may sound ambitious, perhaps even idealistic, but the rapid evolution of remote sensing technologies suggests that these possibilities are no longer purely imaginary. <em>You may say I’m a dreamer, but I’m not the only one…</em></p>
+<section id="final-thoughts" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="final-thoughts"><span class="header-section-number">7.2</span> Final Thoughts</h2>
+<p>How much can we trust the accuracy attached to machine learning models in Earth observation? Well, It’s a big question. As we’ve seen, accuracy assessment is far from straightforward. Beyond the usual biases in data collection, we also need to account for the additional distortions that spatiality introduces into our analysis, something overlooked in practice.</p>
+<p>Global pre-classified products like Dynamic World illustrate this tension well. They are freely available and increasingly used as inputs for policy-making. But as we saw, their accuracy varies enormously depending on the geographic context.</p>
+<p>The problem (to be honest, is not) is that more and more non-specialists, such as urban planners, NGOs, local governments, are incorporating remote sensing outputs into their decisions, often without fully understanding what those accuracy figures do and don’t mean.</p>
+<p>That is why it is so important for governments to build specialized teams with real expertise in satellite imagery analysis. This is not only a problem of infrastructure or data access, but also fundamentally a problem of human resources and institutional capacity. We need civil servants who can engage critically with these tools, ask the right questions about model validation, and avoid being misled by accuracy figures that look more reliable than they are.</p>
+<p>Remote sensing is becoming a key input for public decisions. The technical side is advancing fast. The institutional side needs to catch up.</p>
 
 
 </section>
@@ -646,13 +628,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./class2.html" class="pagination-link" aria-label="Week - It's hot out here: Dive into thermal remote sensors">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week - It’s hot out here: Dive into thermal remote sensors</span></span>
+      <a href="./class6.html" class="pagination-link" aria-label="Week - Can we apply machine learning to remote sensing?  [YES] | no">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week - Can we apply machine learning to remote sensing? [YES] | no</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./class4.html" class="pagination-link" aria-label="Week - How can we take advantage of Remote Sensing (without dying in the attempt)?">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week - How can we take advantage of Remote Sensing (without dying in the attempt)?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./class8.html" class="pagination-link" aria-label="Week - This is the end, but don’t be SAR: Synthetic Aperture Radar">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week - This is the end, but don’t be SAR: Synthetic Aperture Radar</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

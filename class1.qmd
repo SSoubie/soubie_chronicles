@@ -26,7 +26,7 @@ Remote sensing data and tools are continuously expanding, along with their appli
 
 One of the most common and long-standing uses of remote sensing is **weather forecasting**. Weather satellites are equipped with numerous sensors that measure atmospheric variables such as temperature and humidity, but also detect cloud cover, estimate wind speed and direction, and monitor weather events. For example, the [National Meteorological Service (SMN) of Argentina](https://ws2.smn.gob.ar/) has developed an experimental daily rainfall monitoring tool called **SQPE-OBS (Satellite Quantitative Precipitation Estimation with Observations)**. This system combines satellite precipitation estimates from NASA’s IMERG dataset with ground-based weather stations observations to produce more accurate estimates of accumulated precipitation across the southern cone.
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, out.width="75%", fig.cap="Source: SMN"}
 knitr::include_graphics("images/week1/smn.jpg")
 ```
 
@@ -34,19 +34,19 @@ In the last decades, remote sensing tools have gained increasing importance as a
 
 One example of these initiatives is [Geofuego](https://manejodelfuego.conae.gov.ar/), a comprehensive platform for monitoring forest, rural, and wildland fires in Argentina, developed by the [Centro de Investigación y Extensión Forestal Andino Patagónico (CIEFAP)](https://www.argentina.gob.ar/ciencia/sact/cites/ciefap) in collaboration with the [Comisión Nacional de Actividades Espaciales (CONAE)](https://www.argentina.gob.ar/ciencia/conae), Argentina's National Meteorological Service (SMN), and the Ministry of Security of Argentina.
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, fig.cap="Source: CONAE"}
 knitr::include_graphics("images/week1/geofuego.jpg")
 ```
 
 Remote sensing imagery can also support **economic development**. For example, it can be used for monitoring agricultural productivity, identifying geological formations with mining potential, tracking urban expansion for real estate development, and selecting optimal locations for wind farms or solar energy facilities, among many other applications. If you want to learn more about these examples, you can have a look to the [geoportal](https://www.idecor.gob.ar/mapas-cordoba/) of the [Infraestructura de Datos Espaciales de la Provincia de Córdoba (IDECOR)](https://www.idecor.gob.ar/).
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, out.width="85%", fig.cap="Source: IDECOR"}
 knitr::include_graphics("images/week1/idecor.png")
 ```
 
 Finally, as economic activities expand, remote sensing can also serve as a valuable tool for **public administration**, including **tax monitoring and the detection of (illegal) activities**. In this sense, satellite sensors can observe areas that are otherwise difficult or costly to monitor through traditional methods, such as the open ocean. For example, the platform [Global Fishing Watch](https://globalfishingwatch.org/) uses night-time light imagery to detect and track illegal fishing activity in international waters.
 
-```{r fig.align='center', echo=FALSE}
+```{r fig.align='center', echo=FALSE, out.width="85%", fig.cap="Source: Global Fishing Watch"}
 knitr::include_graphics("images/week1/gfw.png")
 ```
 

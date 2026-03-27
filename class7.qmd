@@ -1,0 +1,39 @@
+# Week - Machine Learning Vol. II: Pixel-Based vs Object-Based Methods and Some of Accuracy
+
+<br>
+
+This week we continue exploring machine learning methods applied to Earth observation data, focusing on different types of classifications and how to properly assess their accuracy.
+
+There are different ways in which we can improve our machine learning models in Earth observation. For example, instead of using a pixel-by-pixel approach, we can work with **Object-Based Image Analysis (OBIA)**. These approaches combine similar pixels into objects in a clustering-like fashion, generally using two hyperparameters: the spatial distance between pixels and the homogeneity of their colors (superpixels). This is super interesting because it aligns more naturally with how we perceive the world: in objects, not pixels. However, the choice of parameter values remains somewhat subjective.
+
+Another approach is **Sub-Pixel Analysis**, which works on the assumption that each pixel is a combination of spectrally pure land cover types (water, bare soil and vegetation) known as “endmembers”. Rather than assigning a single class, this approach estimates the proportion of each land cover within a pixel. The main problem is that truly pure endmembers are nearly impossible to find in practice, as there is almost always some spectral contamination.
+
+In respect to **accuracy**, Earth observation models can be evaluated through Producer Accuracy (recall), User Accuracy (precision), and Overall Accuracy. An important limitation is that neither producer nor user accuracy considers true negatives and, more fundamentally, you can’t maximize both at the same time, as shifting the decision threshold always benefits one at the expense of the other.
+
+Finally, a critical issue in spatial machine learning is **autocorrelation** between training and test sets. Since nearby pixels tend to be more similar, random cross-validation can inadvertently leak information between sets, inflating accuracy. **Spatial cross-validation** addresses this by applying spatial partitioning techniques (like good old Moran's I) to ensure training and test data are geographically separated. Interestingly, object-based methods tend to show lower apparent accuracy than pixel-based ones precisely for this reason: merging pixels into objects naturally reduces spatial leakage.
+
+My recommendation: every time you run a machine learning model on spatial imagery, don't forget to check for spatial autocorrelation!
+
+<br>
+
+## Applications
+
+In remote sensing, we can work with different pre classified products from various sources. One recent and interesting open-access initiative is [Dynamic World](https://dynamicworld.app/), a near real-time 10m land cover product built on Sentinel-2 imagery using a fully convolutional neural network. Tools like this can be really powerful and save us a lot of time.
+
+However, we have to bear in mind that sometimes these pre-classified products aggregate too many things together, making data less imprecise for local context. For example, [Venter et al. (2022)](https://www.mdpi.com/2072-4292/14/16/4101), in their study “*Global 10 m Land Use Land Cover Datasets: A Comparison of Dynamic World, World Cover and Esri Land Cover*” compare Dynamic World, ESA WorldCover, and ESRI Land Cover to see how good they perform using the same ground truth dataset. Their results showed that Esri had the highest overall accuracy (75%) compared to Dynamic World (72%) and WorldCover (65%), and that all three products showed strong spatial correspondence for water, built areas, and tree cover, but diverged significantly for other classes. As we mentioned before, this example should attract our attention when using global indexes as their aggregated nature and rigid class classification may underestimate local realities.
+
+In respect to the discussion whether object-based or pixel-based approaches deliver better results, [Yan et al. (2022)](https://www.mdpi.com/2072-4292/14/15/3744), in their study “*Comparing Object-Based and Pixel-Based Methods for Local Climate Zones Mapping with Multi-Source Data*”, compared both methods for Local Climate Zone mapping in Chinese cities. Their results showed that the object-based methods perform better than pixel-based classifications, with overall accuracy higher by approximately 2% and 5% depending on the spatial resolution used. However, it’s worth mentioning that the advantage was not uniform across all land cover types, which is a good reminder that there is no single "best" approach. At the end, the choice between pixel and object-based analysis depends heavily on what you are trying to map and at what resolution. Also, this paper is interesting because, as we’ve seen, object-based methods tend to be less accurate than pixel-based ones when spatial autocorrelation is not accounted for. This suggests that the real performance gap between those methods in this study could be even larger than reported.
+
+<br>
+
+## Final Thoughts
+
+How much can we trust the accuracy attached to machine learning models in Earth observation? Well, It's a big question. As we've seen, accuracy assessment is far from straightforward. Beyond the usual biases in data collection, we also need to account for the additional distortions that spatiality introduces into our analysis, something overlooked in practice.
+
+Global pre-classified products like Dynamic World illustrate this tension well. They are freely available and increasingly used as inputs for policy-making. But as we saw, their accuracy varies enormously depending on the geographic context.
+
+The problem (to be honest, is not) is that more and more non-specialists, such as urban planners, NGOs, local governments, are incorporating remote sensing outputs into their decisions, often without fully understanding what those accuracy figures do and don't mean. 
+
+That is why it is so important for governments to build specialized teams with real expertise in satellite imagery analysis. This is not only a problem of infrastructure or data access, but also fundamentally a problem of human resources and institutional capacity. We need civil servants who can engage critically with these tools, ask the right questions about model validation, and avoid being misled by accuracy figures that look more reliable than they are.
+
+Remote sensing is becoming a key input for public decisions. The technical side is advancing fast. The institutional side needs to catch up.
