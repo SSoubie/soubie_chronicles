@@ -1,4 +1,4 @@
-# Week - Can we apply machine learning to remote sensing?  [YES] | no
+# Week - Can we apply machine learning to remote sensing? \[YES\] \| no
 
 <br>
 
